@@ -46,7 +46,7 @@
 
 ### Links
 
-- Solution URL: [Frontend Mentor Solution Page](https://www.frontendmentor.io/solutions/a-simple-coming-soon-page-for-an-apparel-company-website-b2H9pOxuAk)
+- Solution URL: [Frontend Mentor Solution Page](https://www.frontendmentor.io/solutions/a-simple-rating-component-webpage-using-html-css-and-js-kJ-jmy39gF)
 - Live Site URL: [GitHub Pages](https://m-lakshan.github.io/FM_Challenge-Interactive-Rating-Component/)
 
 ## My process
