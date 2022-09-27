@@ -1,0 +1,328 @@
+*, *::after, *::before {
+    box-sizing: border-box;
+    margin: 0%;
+    padding: 0%;
+}
+
+html {
+    background: $White;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-repeat: repeat;
+    font-family: 'Overpass', sans-serif;
+    background: $Very_Dark_Blue;
+    // background: linear-gradient(135deg, $Dark_Blue 1%, $Very_Dark_Blue 99%);
+    text-align: center;
+    height: 100vh;
+    width: 100%;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: $Very_Dark_Blue;
+    // background: linear-gradient(-135deg, $main_bg_i, $main_bg_ii);
+    height: fit-content;
+    width: fit-content;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: inset -300px 300px 400px 0px $main_bg_i;
+    
+    
+    h2 {
+                    
+        span.odd {
+            animation: slide_i 1000ms ease-in-out 90ms 1;
+        }
+        
+        span.even {
+            animation: slide_ii 1000ms ease-in-out 90ms 1;
+        }
+    }
+
+    #rating_mode {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+        padding: 25px;
+        height: 360px;
+        width: 330px;
+        
+        #logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            height: 40px;
+            width: 40px;
+            background: $Dark_Blue;
+            margin-top: -2px;
+
+            img {
+                margin: 0px 0px 2px 2.5px;
+            }
+        }
+
+        h2 {
+            width: fit-content;
+            color: $White;
+            font-weight: 600;
+            margin: 4.5px 0px -2.5px;
+            transition: 200ms ease;
+        }
+
+        .desc {
+            font-size: 15px;
+            color: $Light_Grey;
+            text-align: left;
+            letter-spacing: -0.5px;
+            line-height: 22px;
+            margin-bottom: 5px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+            height: 125px;
+            width: 100%;
+            
+            .rate_inputs {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+                position: relative;
+                width: inherit;
+                
+                input {
+                    position: absolute;
+                    height: 0%;
+                    width: 0%;
+                    opacity: 0%;
+                    z-index: -1;
+                }
+
+                label {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    height: 42px;
+                    width: 42px;
+                    font-size: 13px;
+                    font-weight: 600;
+                    border-radius: 50%;
+                    background: $Dark_Blue;
+                    padding: 2px 0px 0px 1px;
+                    color: $Medium_Grey;
+                    transition: 150ms ease-out;
+                    margin-top: -1px;
+
+                    &:hover {
+                        cursor: pointer;
+                        transition: 150ms ease-in;
+                        background: $Light_Grey;
+                        color: $White;
+                    }
+                }
+
+                label.pop {
+                    animation: pop 800ms cubic-bezier(.25,.46,.45,.94) 100ms 2;
+                }
+
+                input:checked + label {
+                    transition: 150ms ease-in;
+                    background: $Orange;
+                    color: $White;
+                }
+            }
+
+            #submit_btn {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+                height: 45px;
+                border-radius: 30px;
+                border: none;
+                font-family: 'Overpass', sans-serif;
+                background-color: $Orange;
+                color: $White;
+                letter-spacing: 3px;
+                font-weight: 500;
+                transition: 200ms ease-out;
+                margin-top: 10px;
+
+                &:hover {
+                    cursor: pointer;
+                    transition: 200ms ease-in;
+                    background: $White;
+                    color: $Orange;
+                }
+            }
+        }
+    }
+
+    #conclusion_mode {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        padding: 30px;
+        height: 360px;
+        width: 330px;
+
+        img {
+            width: 145px;
+            height: auto;
+            margin-top: -2px;
+        }
+
+        h4 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 32px;
+            width: 175px;
+            background: $Dark_Blue;
+            color: $Orange;
+            font-weight: 300;
+            border-radius: 20px;
+            font-size: 14.5px;
+            padding-top: 4px;
+            margin-top: 8px;
+            margin-bottom: -2px;
+        }
+
+        h2 {
+            color: $White;
+            font-weight: 600;
+            margin-top: 16px;
+            margin-bottom: -5px;
+        }
+
+        .tnk_note {
+            color: $Light_Grey;
+            font-size: 14px;
+            line-height: 22px;
+        }
+    }
+
+    @media screen and (min-width: 1440px) {
+        border-radius: 30px;
+        margin-top: 2px;
+        
+        #rating_mode {
+            height: 415px !important;
+            width: 415px !important;
+            padding: 30px !important;
+
+            #logo {
+                height: 48px !important;
+                width: 48px !important;
+                margin-top: 3px !important;
+            }
+    
+            h2 {
+                font-weight: 700 !important;
+                font-size: 28px !important;
+                margin: 20px 0px -1px !important;
+            }
+    
+            .desc {
+                font-size: 15px !important;
+                letter-spacing: -0.5px !important;
+                line-height: 24px !important;
+                margin-bottom: 9px !important;
+            }
+    
+            form {
+                height: 135px !important;
+                
+                .rate_inputs {
+    
+                    label {
+                        height: 50px !important;
+                        width: 50px !important;
+                        font-size: 15px !important;
+                        transition: 150ms ease-out;
+                        margin-top: -3px !important;
+                        font-size: 17px !important;
+    
+                        &:hover {
+                            cursor: pointer;
+                            transition: 150ms ease-in;
+                            background: $Light_Grey;
+                            color: $White;
+                        }
+                    }
+
+                    label.pop {
+                        animation: pop 500ms cubic-bezier(.25,.46,.45,.94) 50ms 1;
+                    }
+    
+                    input:checked + label {
+                        transition: 150ms ease-in;
+                        background: $Orange;
+                        color: $White;
+                    }
+                }
+    
+                #submit_btn {
+                    font-size: 15px !important;
+                    transition: 200ms ease-out;
+                    margin-top: 10px !important;
+                    margin-bottom: -10px !important;
+                    padding-top: 3px !important;
+    
+                    &:hover {
+                        cursor: pointer;
+                        transition: 200ms ease-in;
+                        background: $White;
+                        color: $Orange;
+                    }
+                }
+            }
+        }
+    
+        #conclusion_mode {
+            height: 415px !important;
+            width: 415px !important;
+    
+            img {
+                width: 162px !important;
+                margin-top: 4px !important;
+            }
+            
+            h4 {
+                margin-bottom: 13px !important;
+                width: 190px !important;
+            }
+            
+            h2 {
+                font-size: 26px !important;
+                margin-top: -1px !important;
+            }
+    
+            .tnk_note {
+                color: $Light_Grey !important;
+                font-size: 15px !important;
+                line-height: 24px !important;
+                margin-top: -9px !important;
+                margin-bottom: 3px !important;
+                word-spacing: 1.2px !important;
+            }
+        }
+    }
+}

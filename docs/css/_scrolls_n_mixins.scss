@@ -1,0 +1,76 @@
+//animations
+@keyframes pop {
+    0% { border-top: 1px solid $Orange_phase_i; }
+    25% { border-right: 2px solid $Orange_phase_ii; }
+    50% { border-bottom: 2px solid $Orange; }
+    100% { border-left: 2px solid $Orange_phase_ii; }
+}
+
+$slide_i_deg: 120deg;
+$slide_ii_deg: -240deg;
+
+@keyframes slide_i {
+    0% {
+        background: linear-gradient($slide_i_deg, $Orange, $Orange_phase_iii);
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+    }
+    25% {
+        background: linear-gradient($slide_i_deg, $Orange_phase_iii, $Orange_phase_ii);
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+    }
+    50% {
+        background: linear-gradient($slide_i_deg, $Orange_phase_ii, $Orange_phase_i);
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+    }
+    75% {
+        background: linear-gradient($slide_i_deg, $Orange_phase_i, $White);
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+    }
+    100% {
+        background: $White;
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+    }
+}
+
+@keyframes slide_ii {
+    0% {
+        background: linear-gradient($slide_ii_deg, $Orange, $Orange_phase_iii);
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+    }
+    25% {
+        background: linear-gradient($slide_ii_deg, $Orange_phase_iii, $Orange_phase_ii);
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+    }
+    50% {
+        background: linear-gradient($slide_ii_deg, $Orange_phase_ii, $Orange_phase_i);
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+    }
+    75% {
+        background: linear-gradient($slide_ii_deg, $Orange_phase_i, $White);
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+    }
+    100% {
+        background: $White;
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+    }
+}
